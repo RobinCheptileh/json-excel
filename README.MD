@@ -1,6 +1,6 @@
 # Json Excel
 
-Easily transform JSON data to Excel spreadsheets and vice versa.
+Easily transform JSON data to Excel spreadsheets and vice versa. See it in action on [Heroku](https://json-excel.herokuapp.com/)
 
 ## Installation
 
