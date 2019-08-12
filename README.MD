@@ -22,6 +22,46 @@ Start the gunicorn server:
 
     $ gunicorn app:app
 
+### 1. To Spreadsheet:
+
+**Endpont**:
+
+    /api/v1/to-spreadsheet
+    
+**Data**:
+
+```json
+{
+	"header": ["A", "B", "C"],
+	"rows": [
+		[1, 2, 3],
+		[4, 5, 6]
+		]
+}
+```
+
+**Request:**
+
+    POST /api/v1/to-spreadsheet
+    Content-Type: application/json
+    Accept-Encoding: gzip, deflate
+    Content-Length: 71
+    Connection: keep-alive
+    { "header": ["A", "B", "C"], "rows": [ [1, 2, 3], [4, 5, 6] ] }
+    
+**Spreadsheet Response:**
+
+![To Spreadsheet](screenshots/to-spreadsheet.png)
+
+### 2. To JSON:
+
+**Endpont**:
+
+    /api/v1/to-json
+    
+
+_**More Coming Soon!**_
+
 ## Contributing
 
 Bug reports and pull requests are welcome on GitHub at https://github.com/robincheptileh/json-excel. This project is intended to be a safe, welcoming space for collaboration, and contributors are expected to adhere to the [Contributor Covenant](http://contributor-covenant.org) code of conduct.
