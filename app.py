@@ -7,6 +7,13 @@ from openpyxl.writer.excel import save_virtual_workbook
 app = Flask(__name__)
 
 
+@app.route("/")
+def index():
+    return jsonify({
+        'message': 'Welcome to json-excel! Head over to https://github.com/RobinCheptileh/json-excel for documentation.'
+    })
+
+
 @app.route("/api/v1/to-spreadsheet", methods=['POST'])
 def to_spreadsheet():
     if not request.json or 'rows' not in request.json or not isinstance(request.json['rows'], list):
